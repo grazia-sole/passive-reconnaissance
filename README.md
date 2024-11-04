@@ -117,7 +117,7 @@ Puoi trovare ulteriori informazioni su Shodan e le sue funzionalità sul loro si
 
 
 ## Nginx vs. Apache
-Ecco un confronto sintetico tra Nginx e Apache:
+Nginx e Apache sono due dei server web più popolari e utilizzati al mondo.
 
 ### 1. Architettura
 - **Nginx**: Asincrono e basato su eventi, gestisce molte connessioni con basso consumo di risorse.
