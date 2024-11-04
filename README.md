@@ -1,22 +1,21 @@
-# Passive-Reconnaissance
+## Passive-Reconnaissance
 
 Tre strumenti importanti per il riconoscimento passivo:
 
 1. whois per interrogare i server WHOIS
 ```
 whois
-
 ```
 
 2. nslookup per interrogare i server DNS
+   
 ```
 nslookup
-
 ```
+
 3. dig per interrogare i server DNS
 ```
 dig
-
 ```
 Usiamo **whois** per interrogare i record WHOIS, mentre usiamo **nslookup** e **dig** per interrogare i record del database DNS. 
 Si tratta di record pubblicamente accessibili e, di conseguenza, non attivano alcun allarme sul bersaglio.
@@ -27,7 +26,7 @@ Il riconoscimento è una fase preliminare per raccogliere informazioni su un obi
 - **Riconoscimento Passivo**: Consiste nell’acquisire informazioni da risorse pubbliche senza interagire direttamente con l’obiettivo, ad esempio consultando i record DNS di un dominio o leggendo articoli di notizie sull'azienda.
 - **Riconoscimento Attivo**: Richiede un’interazione diretta con l'obiettivo, come connettersi ai server dell'azienda (es. HTTP, FTP) o fare domande per ottenere informazioni (ingegneria sociale). Poiché è più invasivo, il riconoscimento attivo può comportare rischi legali senza autorizzazione appropriata.
 
-  
+# WHOIS
 **WHOIS** è un protocollo di richiesta e risposta che segue la specifica RFC 3912 e funziona sulla porta TCP 43. I registri dei domini sono responsabili della gestione dei record WHOIS per i domini che affittano. Il server WHOIS risponde con diverse informazioni sul dominio richiesto, tra cui:
 
 - **Registrar**: Qual è il registrar che ha registrato il dominio?
@@ -36,6 +35,9 @@ Il riconoscimento è una fase preliminare per raccogliere informazioni su un obi
 - **Name Server**: Quale server risolve il nome di dominio?
 
 Per ottenere queste informazioni, si può usare un client WHOIS o un servizio online, ma un client locale (ad esempio su Linux) è spesso più veloce. Il comando è `whois NOME_DOMINIO`.
+```
+whois NOME_DOMINIO
+```
 
 Eseguendo `whois tryhackme.com`, vediamo informazioni dettagliate: chi è il registrar (ad esempio namecheap.com), le date rilevanti, il registrante e i name server da interrogare per i record DNS.
 
