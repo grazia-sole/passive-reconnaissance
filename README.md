@@ -79,4 +79,33 @@ dig @1.1.1.1 tryhackme.com MX
 
 
 
+Strumenti di DNS lookup come **nslookup** e **dig** non riescono a individuare autonomamente i sottodomini. Tuttavia, i sottodomini di un dominio principale possono contenere molte informazioni rilevanti e a volte non sono aggiornati, rendendoli potenzialmente vulnerabili. Per esempio, un dominio come "tryhackme.com" potrebbe avere sottodomini come "wiki.tryhackme.com" e "webmail.tryhackme.com" che possono fornire accesso a informazioni critiche.
+
+#### Tecniche per scoprire i sottodomini:
+1. **Utilizzo dei motori di ricerca**: Consultare più motori di ricerca per ottenere una lista di sottodomini noti pubblicamente, anche se richiede tempo e analisi di numerosi risultati.
+2. **Brute-forcing**: Generare e testare combinazioni di sottodomini per verificare la presenza di record DNS associati.
+
+#### Utilizzo di servizi online:
+Un metodo più rapido è l’utilizzo di servizi online come **DNSDumpster**. DNSDumpster raccoglie e mostra informazioni dettagliate sui DNS in tabelle e grafici, rivelando sottodomini e i relativi indirizzi IP, geolocalizzazione, server di posta (MX) e record TXT.
+
+Esempio: effettuando una ricerca su DNSDumpster per "tryhackme.com", si possono individuare sottodomini come "blog.tryhackme.com" non visibili con query DNS standard. DNSDumpster organizza le informazioni graficamente e offre una funzione di esportazione beta per salvare il grafico.
+
+Usando DNSDumpster o un servizio simile nel browser, è possibile ottenere e rappresentare visivamente tutte queste informazioni con una singola query.4
+
+
+Link: [DNSDumpster](https://dnsdumpster.com)
+
+
+**Shodan.io** è un motore di ricerca per dispositivi connessi a Internet, distinto dai motori di ricerca tradizionali che indicizzano pagine web. Si propone di fornire informazioni sui "dispositivi connessi", come server, router e altri dispositivi IoT, identificando i loro indirizzi IP e raccogliendo informazioni sui servizi in esecuzione. Shodan esegue la scansione di Internet per identificare i dispositivi disponibili pubblicamente, registrando dettagli come:
+
+- **Indirizzo IP**
+- **Azienda di hosting**
+- **Posizione geografica**
+- **Tipo e versione del server**
+
+Queste informazioni possono essere utilizzate sia per la ricognizione passiva in un contesto di penetrazione, sia per la gestione della sicurezza in un contesto difensivo, consentendo agli utenti di monitorare i propri dispositivi esposti online.
+
+Utilizzando Shodan, puoi cercare un dominio specifico, come *tryhackme.com*, per raccogliere dati sui server associati e sui dispositivi connessi. Shodan è particolarmente utile per scoprire vulnerabilità e configurazioni errate nei servizi esposti.
+
+Puoi trovare ulteriori informazioni su Shodan e le sue funzionalità sul loro sito ufficiale: [Shodan.io](https://shodan.io).
 
