@@ -1,4 +1,4 @@
-## Passive-Reconnaissance
+# Passive-Reconnaissance
 
 Tre strumenti importanti per il riconoscimento passivo:
 
@@ -26,7 +26,7 @@ Il riconoscimento è una fase preliminare per raccogliere informazioni su un obi
 - **Riconoscimento Passivo**: Consiste nell’acquisire informazioni da risorse pubbliche senza interagire direttamente con l’obiettivo, ad esempio consultando i record DNS di un dominio o leggendo articoli di notizie sull'azienda.
 - **Riconoscimento Attivo**: Richiede un’interazione diretta con l'obiettivo, come connettersi ai server dell'azienda (es. HTTP, FTP) o fare domande per ottenere informazioni (ingegneria sociale). Poiché è più invasivo, il riconoscimento attivo può comportare rischi legali senza autorizzazione appropriata.
 
-# WHOIS
+## WHOIS
 **WHOIS** è un protocollo di richiesta e risposta che segue la specifica RFC 3912 e funziona sulla porta TCP 43. I registri dei domini sono responsabili della gestione dei record WHOIS per i domini che affittano. Il server WHOIS risponde con diverse informazioni sul dominio richiesto, tra cui:
 
 - **Registrar**: Qual è il registrar che ha registrato il dominio?
@@ -44,6 +44,8 @@ Eseguendo `whois tryhackme.com`, vediamo informazioni dettagliate: chi è il reg
 Le informazioni raccolte possono rivelare nuove superfici di attacco per il social engineering o attacchi tecnici, come l’email dell’admin o i server DNS, se inclusi nel test di penetrazione.
 
 Molti WHOIS oscurano le email per proteggerle dagli spammer, e i registranti possono attivare servizi di privacy per mantenere i dati riservati.
+
+## nslookup & dig
 
 Per ottenere l’indirizzo IP di un dominio, possiamo usare il comando nslookup, che consente di eseguire ricerche sui server DNS. La sintassi del comando è:
 
@@ -78,8 +80,7 @@ Esempio:
 ```
 dig @1.1.1.1 tryhackme.com MX
 ```
-
-
+##Altre tecniche di ricognizione passiva
 
 Strumenti di DNS lookup come **nslookup** e **dig** non riescono a individuare autonomamente i sottodomini. Tuttavia, i sottodomini di un dominio principale possono contenere molte informazioni rilevanti e a volte non sono aggiornati, rendendoli potenzialmente vulnerabili. Per esempio, un dominio come "tryhackme.com" potrebbe avere sottodomini come "wiki.tryhackme.com" e "webmail.tryhackme.com" che possono fornire accesso a informazioni critiche.
 
