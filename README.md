@@ -57,6 +57,9 @@ Dove:
 - NOME_DOMINIO è il dominio da cercare.
 - SERVER è il server DNS da interrogare, come quelli pubblici di Cloudflare (1.1.1.1) o Google (8.8.8.8).
 
+  ![image](https://github.com/user-attachments/assets/d3ab4f76-37ef-4f95-8500-e0638e2e1b2c)
+
+
 Esempi:
 ```
 nslookup -type=A tryhackme.com 1.1.1.1
