@@ -80,7 +80,7 @@ Esempio:
 ```
 dig @1.1.1.1 tryhackme.com MX
 ```
-##Altre tecniche di ricognizione passiva
+## Altre tecniche di ricognizione passiva
 
 Strumenti di DNS lookup come **nslookup** e **dig** non riescono a individuare autonomamente i sottodomini. Tuttavia, i sottodomini di un dominio principale possono contenere molte informazioni rilevanti e a volte non sono aggiornati, rendendoli potenzialmente vulnerabili. Per esempio, un dominio come "tryhackme.com" potrebbe avere sottodomini come "wiki.tryhackme.com" e "webmail.tryhackme.com" che possono fornire accesso a informazioni critiche.
 
