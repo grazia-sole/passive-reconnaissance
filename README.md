@@ -115,3 +115,34 @@ Utilizzando Shodan, puoi cercare un dominio specifico, come *tryhackme.com*, per
 
 Puoi trovare ulteriori informazioni su Shodan e le sue funzionalità sul loro sito ufficiale: [Shodan.io](https://shodan.io).
 
+
+## Nginx vs. Apache
+Ecco un confronto sintetico tra Nginx e Apache:
+
+### 1. Architettura
+- **Nginx**: Asincrono e basato su eventi, gestisce molte connessioni con basso consumo di risorse.
+- **Apache**: Basato su processi e thread, può consumare più risorse con carichi elevati.
+
+### 2. Performance
+- **Nginx**: Eccellente per contenuti statici e carichi pesanti, ottimo per applicazioni ad alto traffico.
+- **Apache**: Buono, ma meno efficiente di Nginx con connessioni simultanee.
+
+### 3. Configurazione e Flessibilità
+- **Nginx**: Configurazione semplice e chiara, ideale per reverse proxy.
+- **Apache**: Estremamente flessibile con molti moduli, ma può risultare complesso.
+
+### 4. Supporto Linguaggi
+- **Nginx**: Non supporta direttamente linguaggi come PHP; usa FastCGI o server esterni.
+- **Apache**: Supporto nativo per PHP e scripting tramite moduli.
+
+### 5. Sicurezza
+- **Nginx**: Misure di sicurezza solide e supporto per SSL/TLS.
+- **Apache**: Buone funzionalità di sicurezza, ma la configurazione può portare a vulnerabilità.
+
+### 6. Utilizzo
+- **Nginx**: Ideale come server front-end, reverse proxy e per contenuti statici.
+- **Apache**: Adatto a una vasta gamma di applicazioni web e configurazioni complesse.
+
+### Conclusione
+- **Nginx** è preferito per efficienza e prestazioni in ambienti ad alto traffico.
+- **Apache** è scelto per progetti con ampie esigenze di scripting e configurazione. Spesso usati insieme.
